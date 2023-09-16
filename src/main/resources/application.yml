@@ -1,0 +1,22 @@
+server:
+  port: 8888
+
+# ?????
+thread:
+  pool:
+    executor:
+      config:
+        core-pool-size: 20
+        max-pool-size: 50
+        keep-alive-time: 5000
+        block-queue-size: 5000
+        policy: CallerRunsPolicy
+
+# ChatGPT SDK Config
+chatgpt:
+  sdk:
+    config:
+      # ???? https://api.openai.com/ 1??:7??? ?????????????1???? = 500000 Token ??????1????
+      api-host: https://api.openai-proxy.com/
+      # ???? https://platform.openai.com/account/api-keys
+      api-key:
